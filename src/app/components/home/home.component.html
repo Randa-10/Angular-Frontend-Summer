@@ -1,0 +1,31 @@
+<!-- toggle -->
+
+<img src="./logo.jfif"  alt="iti" *ngIf="ToggleImage" />
+<button class="btn btn-danger" (click)="toggleMethod()" >Toggle </button>
+
+<h1>{{TracKHome.TrackName}}</h1>
+<p>{{TracKHome.TrackBranch}}</p>
+
+<!-- <li>{{TrackHome.TrackCourses[0]}}</li> -->
+<!-- <li>{{TrackHome.TrackCourses[1]}}</li> -->
+<!-- <li>{{TrackHome.TrackCourses[2]}}</li> -->
+<!-- <li>{{TrackHome.TrackCourses[3]}}</li> -->
+<!-- //*ngFor ----loop -->
+
+<ul>
+  <li *ngFor="let items of TracKHome.TrackCourses" >
+  {{items}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let items of ItiTracK.TrackCourses" >
+  {{items}}
+  </li>
+</ul>
+
+<div>
+  {{store.PrdName}}
+  </div>
+
+
