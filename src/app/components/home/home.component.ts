@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Track } from '../../Models/track';
 import { CommonModule, NgFor } from '@angular/common';
 import { Store } from '../../Models/store';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor,CommonModule],
+  imports: [NgFor,CommonModule,RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -26,5 +27,10 @@ constructor(){
 toggleMethod(){
   this.ToggleImage=!this.ToggleImage
 }
+
+
+////////////////
+
+//[{name:"",imgurl:"",price:""},{name:"",imgurl:"",price:""},{name:"",imgurl:"",price:""}......,{name:"",imgurl:"",price:""}], api
 
 }

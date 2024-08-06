@@ -1,0 +1,52 @@
+
+<!-- <h1>{{Iproducts.PrdName}} </h1> -->
+<!-- <img src={{Iproducts.prdImageUrl}}  alt="image" /> -->
+<!-- <img [src]="Iproducts.prdImageUrl"  alt="image" /> -->
+
+
+
+<!-- //loop cards -->
+<!-- <div class="row">
+  <div class="col-4" *ngFor="let Prd of Iproducts">
+   <div class="card" style="width: 18rem;">
+   <img class="card-img-top" [src]="Prd.prdImageUrl" alt="Card image cap">
+   <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">quantity:</p>
+    <p class="card-text">price:</p>
+    <a href="#" class="btn btn-primary">Add to cart</a>
+  </div>
+ </div>
+  </div>
+
+</div> -->
+
+
+<div class="prd">
+<div class="row ">
+  <div class="col-sm-4 my-2" *ngFor="let items of Iproducts " >
+<div class="card" style="width: 18rem;"  >
+
+    <img class="card-img-top img-fluid" [src]="items.galleryUrl" alt="Card image cap" >
+  <div class="card-body">
+    <h5 class="card-title" [class.test]="items.quantity == 0"  >{{items.gallaryNama}}</h5>
+
+     <p>price:{{items.price}}</p>
+     <p>Quantity:{{items.quantity}}</p>
+
+     <button class="btn btn-danger" [disabled]="items.quantity == 0" >
+       Add to cart
+     </button>
+ </div>
+</div>
+
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+

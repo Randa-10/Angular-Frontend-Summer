@@ -7,3 +7,7 @@
 .nav-link{
   color:white
 }
+.navbar-expand-lg .navbar-collapse {
+justify-content:center
+
+}
