@@ -1,7 +1,7 @@
 <!-- toggle -->
-
-<img src="./logo.jfif"  alt="iti" *ngIf="ToggleImage" />
-<button class="btn btn-danger" (click)="toggleMethod()" >Toggle </button>
+<div class="home">
+ <img src="./download.jfif"  alt="iti" *ngIf="ToggleImage" class="my-4" />
+<button class="btn btn-danger mx-2" (click)="toggleMethod()"  >Toggle </button>
 
 <h1>{{TracKHome.TrackName}}</h1>
 <p>{{TracKHome.TrackBranch}}</p>
@@ -11,7 +11,6 @@
 <!-- <li>{{TrackHome.TrackCourses[2]}}</li> -->
 <!-- <li>{{TrackHome.TrackCourses[3]}}</li> -->
 <!-- //*ngFor ----loop -->
-
 <ul>
   <li *ngFor="let items of TracKHome.TrackCourses" >
   {{items}}
@@ -24,8 +23,10 @@
   </li>
 </ul>
 
-<div>
+<!-- <div>
   {{store.PrdName}}
-  </div>
+  </div> -->
+</div>
+
 
 
