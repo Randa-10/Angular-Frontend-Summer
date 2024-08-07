@@ -3,11 +3,12 @@ import { Track } from '../../Models/track';
 import { CommonModule, NgFor } from '@angular/common';
 import { Store } from '../../Models/store';
 import { RouterOutlet } from '@angular/router';
+import { ImageStyleDirective } from '../../Directives/image-style.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor,CommonModule,RouterOutlet],
+  imports: [NgFor,CommonModule,RouterOutlet,ImageStyleDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

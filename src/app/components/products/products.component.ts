@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { StoreInterface } from '../../Models/store-interface';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgClass, NgFor } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { ImageStyleDirective } from '../../Directives/image-style.directive';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [NgFor,RouterOutlet],
+  imports: [RouterOutlet ,CommonModule,ImageStyleDirective],  //NgFor ,NgClass ,NgStyle 
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -44,7 +45,7 @@ constructor(){
     galleryUrl:"https://m.media-amazon.com/images/I/81N3z0OHdTS._AC_SX679_.jpg",aboutThis:["size","color"]}
 , {id:1,gallaryNama:"Sphere Art 60X40cm",price:20,quantity:200,
   galleryUrl:"https://m.media-amazon.com/images/I/614ARo0EMcL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]},
-  {id:1,gallaryNama:"Modern Tableau Print ",price:20,quantity:0,
+  {id:1,gallaryNama:"Modern Tableau Print ",price:20,quantity:1,
     galleryUrl:"https://m.media-amazon.com/images/I/9157b1IVVhL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]}
 ,{id:1,gallaryNama:"Artexist Bathroom",price:20,quantity:200,
   galleryUrl:"https://i.pinimg.com/236x/c8/df/15/c8df156558f98803b20bc6c710d41a75.jpg",aboutThis:["size","color"]},
@@ -52,6 +53,19 @@ constructor(){
     galleryUrl:"https://m.media-amazon.com/images/I/51PpieNNhJL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]}
 ,{id:1,gallaryNama:"Artexist Bathroom",price:20,quantity:200,
   galleryUrl:"https://m.media-amazon.com/images/I/51yPECTLElL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]},
+  {id:1,gallaryNama:"Artexist Bathroom",price:20,quantity:0,
+    galleryUrl:"https://m.media-amazon.com/images/I/81N3z0OHdTS._AC_SX679_.jpg",aboutThis:["size","color"]}
+, {id:1,gallaryNama:"Sphere Art 60X40cm",price:20,quantity:200,
+  galleryUrl:"https://m.media-amazon.com/images/I/614ARo0EMcL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]},
+  {id:1,gallaryNama:"Modern Tableau Print ",price:20,quantity:1,
+    galleryUrl:"https://m.media-amazon.com/images/I/9157b1IVVhL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]}
+,{id:1,gallaryNama:"Artexist Bathroom",price:20,quantity:200,
+  galleryUrl:"https://i.pinimg.com/236x/c8/df/15/c8df156558f98803b20bc6c710d41a75.jpg",aboutThis:["size","color"]},
+  {id:1,gallaryNama:"Artexist Bathroom",price:20,quantity:200,
+    galleryUrl:"https://m.media-amazon.com/images/I/51PpieNNhJL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]}
+,{id:1,gallaryNama:"Artexist Bathroom",price:20,quantity:200,
+  galleryUrl:"https://m.media-amazon.com/images/I/51yPECTLElL.__AC_SY300_SX300_QL70_ML2_.jpg",aboutThis:["size","color"]},
+
 ]
 
 
