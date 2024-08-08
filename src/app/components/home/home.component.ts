@@ -4,6 +4,8 @@ import { CommonModule, NgFor } from '@angular/common';
 import { Store } from '../../Models/store';
 import { RouterOutlet } from '@angular/router';
 import { ImageStyleDirective } from '../../Directives/image-style.directive';
+import { ProductsServicesService } from '../../services/products-services.service';
+import { StoreInterface } from '../../Models/store-interface';
 
 @Component({
   selector: 'app-home',
@@ -16,13 +18,17 @@ export class HomeComponent {
 TracKHome:Track
 ItiTracK:Track
 store:Store
-
 ToggleImage:boolean=true
+// Iproduct:StoreInterface[]
 
-constructor(){
+constructor( public products:ProductsServicesService ){
   this.TracKHome=new Track("Frontend","ITI Sohag",["html ","css","js","Angular"])
   this.ItiTracK=new Track(" MEARN ","ITI Sohag",["Angular ","Next js","React","Node js"])
   this.store=new Store("Laptop",10)
+
+  // this.Iproduct=this.products.getAllProducts()
+  // console.log(this.Iproduct);
+
 }
 //
 toggleMethod(){

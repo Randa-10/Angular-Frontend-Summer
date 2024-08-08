@@ -27,11 +27,11 @@
      <!-- ng-container ,ng-template  -->
      <ng-container  *ngFor="let items of Iproducts">
    <!-- <div class="col-sm-3 " *ngIf="items.quantity > 0">  -->
-   <div class="col-sm-3 "> 
+   <div class="col-sm-3 ">
 
       <div class="card my-4" style="width: 18rem;">
  <!-- colorBorder="" -->
-        <img class="card-img-top img-fluid" [src]="items.galleryUrl" alt="Card image cap" appImageStyle >
+        <img class="card-img-top img-fluid" [src]="items.galleryUrl" alt="Card image cap" appImageStyle colorBorder="black" >
         <div class="card-body">
           <!-- //class ,Ngclass -->
           <!-- <h5 class="card-title" [class.test]="items.quantity == 0"  [class.text-danger]="items.quantity == 0"   >{{items.gallaryNama}}</h5> -->
@@ -59,25 +59,31 @@
               in stock
             </ng-container>
           </ng-container>    -->
-          
+
 <!-- //key:REF -->
-          <ng-container *ngIf="items.quantity >0 ;else REF" >  
+          <ng-container *ngIf="items.quantity >0 ;else REF" >
                 In stock
           </ng-container>
           <ng-template #REF> out of stock </ng-template>
-          
+
 <div>
     <button class="btn btn-danger" [disabled]="items.quantity == 0" >
             Add to cart
    </button>
 </div>
-        
+<div>
+  <!-- <button class="btn btn-danger mt-1" (click)="getProductID(items.id)" > -->
+  <button class="btn btn-danger mt-1" [routerLink]="['/Products',items.id]" > 
+
+         Details
+ </button>
+</div>
         </div>
 
       </div>
-    </div>     
-  
-     </ng-container>    
- 
+    </div>
+
+     </ng-container>
+
     </div>
 </div>

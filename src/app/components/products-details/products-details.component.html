@@ -1,0 +1,20 @@
+<div class="row">
+
+<div class="col-4">
+<img src="{{product?.galleryUrl}}" alt="img" />
+</div>
+<div class="col-8">
+<h1> Name:{{product?.gallaryNama}}</h1>
+<h1>price: {{product?.quantity}}</h1>
+
+
+<!-- {{product |json}} -->
+</div>
+</div>
+
+<!-- <button  class="btn btn-danger" routerLink="/Products"> -->
+<button  class="btn btn-danger" (click)="goBack()">
+  go back
+</button>
+
+

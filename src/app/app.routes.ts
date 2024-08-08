@@ -3,6 +3,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { MainComponentsComponent } from './components/main-components/main-components.component';
+import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 
 export const routes: Routes = [
   //Day3
@@ -19,13 +20,15 @@ export const routes: Routes = [
   {path:'',redirectTo:'/Home',pathMatch:'full'},
   {path:"Home",component:HomeComponent,title:"home page"},
   {path:"Products",component:ProductsComponent,title:"product page"},
+  // /:prdID
+  {path:"Products/:prdID",component:ProductsDetailsComponent,title:"Details"}
 
-]}, 
+]},
 
-  
+
  {path:'**',component:NotfoundComponent}
 
- 
+
 
 
 
